@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — NO FACE MAFIA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="hero-noise"></div>
+
+<header id="site-header">
+  <div class="logo"><span class="dot"></span>NO FACE MAFIA</div>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="beats.html">Beats</a>
+    <a href="artistes.html">Artistes</a>
+    <a href="projets.html">Projets</a>
+    <a href="apropos.html">À propos</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a href="beats.html" class="nav-cta">Écouter</a>
+  <button class="burger" id="burgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Accueil</a>
+  <a href="beats.html">Beats</a>
+  <a href="artistes.html">Artistes</a>
+  <a href="projets.html">Projets</a>
+  <a href="apropos.html">À propos</a>
+  <a href="contact.html">Contact</a>
+  <a href="beats.html" class="nav-cta">Écouter les beats</a>
+</div>
+
+<section id="contact" style="padding-top:160px;">
+  <div class="wrap contact-inner">
+    <div class="contact-info">
+      <h2>Contact</h2>
+      <p>Pour une collab, une licence exclusive ou juste dire bonjour — le collectif répond.</p>
+      <div class="contact-links">
+        <a href="mailto:linopadaone1@gmail.com">linopadaone1@gmail.com</a>
+        <a href="https://www.instagram.com/lino_padaone01" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/@LinoPadaone01" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://soundcloud.com/nofacemafia04102003" target="_blank" rel="noopener">SoundCloud</a>
+      </div>
+    </div>
+    <form id="contactForm">
+      <div class="field"><label>Nom</label><input type="text" name="nom" placeholder="Ton nom" required></div>
+      <div class="field"><label>Email</label><input type="email" name="email" placeholder="ton@email.com" required></div>
+      <div class="field"><label>Message</label><textarea name="message" rows="4" placeholder="Ton message..." required></textarea></div>
+      <button type="submit" class="btn btn-primary">Envoyer le message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-row">
+    <div class="logo"><span class="dot"></span>NO FACE MAFIA</div>
+    <small>© 2026 NO FACE MAFIA — Tous droits réservés</small>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>
