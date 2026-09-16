@@ -3,11 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NO FACE MAFIA — Label & Collectif</title>
+<title>Beats — NO FACE MAFIA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a0b09">
 </head>
 <body>
 
@@ -37,27 +39,21 @@
   <a href="beats.html" class="nav-cta">Écouter les beats</a>
 </div>
 
-<section class="hero" id="accueil">
-  <div class="hero-glow"></div>
+<section id="beats" style="padding-top:160px;">
   <div class="wrap">
-    <div class="eyebrow-tag"><span class="bar"></span> Label & collectif indépendant</div>
-    <h1>NO FACE<br><span class="line2">MAFIA</span></h1>
-    <p class="hero-sub">« If you don't Lino will. »</p>
-    <div class="hero-actions">
-      <a href="beats.html" class="btn btn-primary"><span class="btn-play-icon"><svg viewBox="0 0 10 10"><polygon points="0,0 10,5 0,10"/></svg></span> Écouter les beats</a>
-      <a href="projets.html" class="btn btn-ghost">Voir les projets</a>
+    <div class="sec-head">
+      <h2>Latest<br>Beats</h2>
+      <p>Exemples de démonstration montrant le format (cover, BPM, tonalité, lecture, achat). Ils seront remplacés par tes vrais beats.</p>
     </div>
-    <div class="hero-genres">
-      <span class="tag">Trap</span><span class="tag">Drill</span><span class="tag">Rap</span><span class="tag">Hip-Hop</span><span class="tag">Boom Bap</span>
+    <div class="beat-row header-row">
+      <span>#</span><span></span><span>Titre</span>
+      <span class="h-meta">Infos</span>
+      <span class="h-wave">Aperçu</span>
+      <span></span>
     </div>
+    <div id="beatsList"></div>
   </div>
 </section>
-
-<div class="ticker">
-  <div class="ticker-track">
-    <span class="solid">NO FACE MAFIA</span><span>BEATS</span><span class="solid">NO FACE MAFIA</span><span>ARTISTES</span><span class="solid">NO FACE MAFIA</span><span>PROJETS</span><span class="solid">NO FACE MAFIA</span><span>BEATS</span><span class="solid">NO FACE MAFIA</span><span>ARTISTES</span><span class="solid">NO FACE MAFIA</span><span>PROJETS</span>
-  </div>
-</div>
 
 <footer>
   <div class="wrap footer-row">
@@ -66,6 +62,30 @@
   </div>
 </footer>
 
+<div class="player-bar" id="playerBar">
+  <div class="player-cover" id="playerCover"></div>
+  <div class="player-meta"><strong id="playerTitle">—</strong><small id="playerSub">—</small></div>
+  <button class="icon-btn play-btn is-playing" id="playerToggle">
+    <svg class="icon-play" viewBox="0 0 10 10"><polygon points="0,0 10,5 0,10"/></svg>
+    <svg class="icon-pause" viewBox="0 0 10 10"><rect x="0" y="0" width="3" height="10"/><rect x="6" y="0" width="3" height="10"/></svg>
+  </button>
+  <div class="player-progress"><i id="playerFill"></i></div>
+  <div class="player-time" id="playerTime">0:00</div>
+</div>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <button class="modal-close" id="modalClose">&times;</button>
+    <h3 id="modalTitle">Titre du beat</h3>
+    <div class="modal-sub" id="modalSub">Prod. —</div>
+    <div id="modalTiers"></div>
+    <p class="modal-note">Démo : aucun paiement réel n'est encore branché. On ajoutera un vrai système de vente (Gumroad, BeatStars ou Stripe) à une prochaine étape.</p>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
 <script src="js/main.js"></script>
+<script src="js/beats.js"></script>
 </body>
 </html>
